@@ -29,7 +29,7 @@ app.post("/auth/login", async (req, res) => {
         let token = null;
         if(data.admin){ 
             console.log(true);
-            token = generate_admin_token(data.id, data.admin);
+            token = generate_admin_token(data._id);
         }else{
             token = generate_token(data._id);
         }
